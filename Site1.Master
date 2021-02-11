@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Institute_Management.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>School Management :: <%: Page.Title %></title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Assets/logo/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" integrity="sha512-x2MVs84VwuTYP0I99+3A4LWPZ9g+zT4got7diQzWB4bijVsfwhNZU2ithpKaq6wTuHeLhqJICjqE6HffNlYO7w==" crossorigin="anonymous" />
+
+    <link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="Assets/css/loader.css" rel="stylesheet" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js" integrity="sha512-cOGL6gI01KK2Bws211W8S3COhzrorBbzKvLPWYOVtSEYet3yG1fzJrimtwh8rUyvMy9qjgY2e7Rt6IwyaiX1Mg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--            <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true">
+            </asp:ScriptManager>--%>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="Dashboard.aspx">School Management</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Country.aspx">Country</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="City.aspx">City</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Village.aspx">Village</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Department.aspx">Department</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Student.aspx">Student</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Category.aspx">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SubCategory.aspx">SubCategory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MainCategory.aspx">MainCategory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product.aspx">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="DynamicGrid.aspx">DynamicGrid</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+        <div class="container" style="min-height: 450px">
+            <div class="loading">Loading</div>
+            <div class="row">
+                <%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral,
+ PublicKeyToken=31bf3856ad364e35"
+                    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+                <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+                </asp:ScriptManager>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+                        © 2020 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">School Management</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <script src="Assets/scripts/jquery.custome.js"></script>
+</body>
+</html>
